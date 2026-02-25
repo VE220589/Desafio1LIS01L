@@ -77,7 +77,39 @@ try {
 
     //Guardamos en sesión
 
-    $_SESSION['quotes'][] = $quote;
+   $filePath = '../data/quotes.json';
+
+if (!file_exists($filePath)) {
+    file_put_contents($filePath, json_encode([]));
+}
+
+$existingQuotes = json_decode(file_get_contents($filePath), true);
+
+if (!is_array($existingQuotes)) {
+    $existingQuotes = [];
+}
+
+$newQuote = [
+    'codigo' => $quote->getCodigo(),
+    'nombre' => $cliente['nombre'],
+    'empresa' => $cliente['empresa'],
+    'email' => $cliente['email'],
+    'telefono' => $cliente['telefono'],
+    'servicios' => $quote->getItems(),
+    'subtotal' => $quote->getSubtotal(),
+    'descuento' => $quote->getDescuento(),
+    'iva' => $quote->getIVA(),
+    'total' => $quote->getTotal(),
+    'fecha' => $quote->getFechaGeneracion(),
+    'validez' => $quote->getFechaValidez(),
+    'estado' => 'Válida'
+];
+
+$existingQuotes[] = $newQuote;
+
+file_put_contents($filePath, json_encode($existingQuotes, JSON_PRETTY_PRINT));
+
+unset($_SESSION['cart']); // Limpia carrito después de generar
 
     echo json_encode([
         'success' => true,

@@ -170,9 +170,23 @@ class Quote
     }
 
     public function getItems(): array
-    {
-        return $this->items;
+{
+    $itemsFormateados = [];
+
+    foreach ($this->items as $item) {
+
+        $service = $item['service'];
+
+        $itemsFormateados[] = [
+            'id' => $service->getId(),
+            'nombre' => $service->getNombre(),
+            'precio' => $service->getPrecio(),
+            'cantidad' => $item['cantidad']
+        ];
     }
+
+    return $itemsFormateados;
+}
 
     public function getSubtotal(): float
     {
