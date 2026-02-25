@@ -4,6 +4,7 @@ session_start();
 
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <title>Sistema de Cotización Digital</title>
@@ -12,112 +13,113 @@ session_start();
 
 <body>
 
-<!-- NAVBAR -->
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container">
-        <a class="navbar-brand" href="#">Elegir opciones</a>
-        <div>
-            <a href="pages/services-catalog.php" class="btn btn-outline-light me-2">
-                Catálogo
-            </a>
-            <a href="pages/view-quotes.php" class="btn btn-warning">
-                Historial
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Elegir opciones</a>
+            <div>
+                <a href="pages/services-catalog.php" class="btn btn-outline-light me-2">
+                    Catálogo
+                </a>
+                <a href="pages/view-quote.php" class="btn btn-warning">
+                    Historial de cotizaciones
+                </a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section class="bg-light py-5">
+        <div class="container text-center">
+            <h1 class="display-5 fw-bold">
+                Sistema de Cotización de Servicios Digitales
+            </h1>
+            <p class="lead mt-3">
+                Plataforma web desarrollada en PHP orientada a la gestión y generación
+                automatizada de cotizaciones para servicios tecnológicos.
+            </p>
+
+            <a href="pages/services-catalog.php" class="btn btn-primary btn-lg mt-3">
+                Explorar Servicios
             </a>
         </div>
-    </div>
-</nav>
+    </section>
 
-<!-- HERO -->
-<section class="bg-light py-5">
-    <div class="container text-center">
-        <h1 class="display-5 fw-bold">
-            Sistema de Cotización de Servicios Digitales
-        </h1>
-        <p class="lead mt-3">
-            Plataforma web desarrollada en PHP orientada a la gestión y generación
-            automatizada de cotizaciones para servicios tecnológicos.
+    <!-- SECCIÓN INFORMATIVA -->
+    <section class="py-5">
+        <div class="container">
+
+            <div class="row text-center mb-4">
+                <h2>¿Qué permite el sistema?</h2>
+            </div>
+
+            <div class="row text-center">
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm p-3">
+                        <h5>Gestión de Servicios</h5>
+                        <p>Catálogo organizado por categorías con precios definidos.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm p-3">
+                        <h5>Carrito Dinámico</h5>
+                        <p>Selección de múltiples servicios con cálculo automático.</p>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card shadow-sm p-3">
+                        <h5>Generación de Cotizaciones</h5>
+                        <p>Aplicación de descuentos, IVA y almacenamiento en historial.</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- CÓMO FUNCIONA -->
+    <section class="bg-light py-5">
+        <div class="container text-center">
+            <h2>¿Cómo funciona?</h2>
+
+            <div class="row mt-4">
+
+                <div class="col-md-3">
+                    <h4>1️⃣</h4>
+                    <p>Selecciona los servicios.</p>
+                </div>
+
+                <div class="col-md-3">
+                    <h4>2️⃣</h4>
+                    <p>Agrega al carrito.</p>
+                </div>
+
+                <div class="col-md-3">
+                    <h4>3️⃣</h4>
+                    <p>Genera tu cotización.</p>
+                </div>
+
+                <div class="col-md-3">
+                    <h4>4️⃣</h4>
+                    <p>Consulta el historial.</p>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">
+            DESAFÍO 1 LIS - Sistema de Cotización | PHP + Bootstrap + AJAX
         </p>
-
-        <a href="pages/services-catalog.php" class="btn btn-primary btn-lg mt-3">
-            Explorar Servicios
-        </a>
-    </div>
-</section>
-
-<!-- SECCIÓN INFORMATIVA -->
-<section class="py-5">
-    <div class="container">
-
-        <div class="row text-center mb-4">
-            <h2>¿Qué permite el sistema?</h2>
-        </div>
-
-        <div class="row text-center">
-
-            <div class="col-md-4">
-                <div class="card shadow-sm p-3">
-                    <h5>Gestión de Servicios</h5>
-                    <p>Catálogo organizado por categorías con precios definidos.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card shadow-sm p-3">
-                    <h5>Carrito Dinámico</h5>
-                    <p>Selección de múltiples servicios con cálculo automático.</p>
-                </div>
-            </div>
-
-            <div class="col-md-4">
-                <div class="card shadow-sm p-3">
-                    <h5>Generación de Cotizaciones</h5>
-                    <p>Aplicación de descuentos, IVA y almacenamiento en historial.</p>
-                </div>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- CÓMO FUNCIONA -->
-<section class="bg-light py-5">
-    <div class="container text-center">
-        <h2>¿Cómo funciona?</h2>
-
-        <div class="row mt-4">
-
-            <div class="col-md-3">
-                <h4>1️⃣</h4>
-                <p>Selecciona los servicios.</p>
-            </div>
-
-            <div class="col-md-3">
-                <h4>2️⃣</h4>
-                <p>Agrega al carrito.</p>
-            </div>
-
-            <div class="col-md-3">
-                <h4>3️⃣</h4>
-                <p>Genera tu cotización.</p>
-            </div>
-
-            <div class="col-md-3">
-                <h4>4️⃣</h4>
-                <p>Consulta el historial.</p>
-            </div>
-
-        </div>
-
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer class="bg-dark text-white text-center py-3">
-    <p class="mb-0">
-        Proyecto académico - Sistema de Cotización | PHP + Bootstrap + AJAX
-    </p>
-</footer>
+    </footer>
 
 </body>
+
 </html>
