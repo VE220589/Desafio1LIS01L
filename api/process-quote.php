@@ -22,12 +22,12 @@ try {
         throw new Exception("No se puede generar cotización con carrito vacío.");
     }
 
-   //Obtener datos del cliente
+    //Obtener datos del cliente
 
     $cliente = [
-        'nombre'   => trim($_POST['nombre'] ?? ''),
-        'empresa'  => trim($_POST['empresa'] ?? ''),
-        'email'    => trim($_POST['email'] ?? ''),
+        'nombre' => trim($_POST['nombre'] ?? ''),
+        'empresa' => trim($_POST['empresa'] ?? ''),
+        'email' => trim($_POST['email'] ?? ''),
         'telefono' => trim($_POST['telefono'] ?? '')
     ];
 
@@ -71,7 +71,7 @@ try {
         $quote->agregarItem($service, $cantidad);
     }
 
-   //Generar cotización
+    //Generar cotización
 
     $quote->generar();
 
